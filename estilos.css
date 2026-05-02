@@ -96,15 +96,21 @@
         
         /* Proyectos */
         .proyectos-container {
-            display: grid;
+            display: flex;
+            justify-content: center;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         
         .proyecto {
             background: white;
-            padding: 25px;
-            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -240,4 +246,11 @@
             section {
                 padding: 40px 0;
             }
+        }
+
+        .proyecto img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
         }
